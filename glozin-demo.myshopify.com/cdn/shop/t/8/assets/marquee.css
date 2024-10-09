@@ -1,0 +1,55 @@
+.animation-marquee {
+    animation: ticker var(--speed, 6s) infinite linear;
+    -webkit-animation: ticker var(--speed, 6s) infinite linear
+}
+
+.animation-marquee.right {
+    animation: ticker-right var(--speed, 6s) infinite linear;
+    -webkit-animation: ticker-right var(--speed, 6s) infinite linear
+}
+
+.marquee:hover>* {
+    animation-play-state: paused
+}
+
+.animation-marquee :is(.spacing, svg) {
+    margin-inline-end: var(--col-gap-desktop, var(--col-gap))
+}
+
+@keyframes ticker {
+    0% {
+        transform: translate(0)
+    }
+    to {
+        transform: translate(-100%)
+    }
+}
+
+@-webkit-keyframes ticker {
+    0% {
+        transform: translate(0)
+    }
+    to {
+        transform: translate(-100%)
+    }
+}
+
+@keyframes ticker-right {
+    0% {
+        transform: translate(0)
+    }
+    to {
+        transform: translate(100%)
+    }
+}
+
+@-webkit-keyframes ticker-right {
+    0% {
+        transform: translate(0)
+    }
+    to {
+        transform: translate(100%)
+    }
+}
+
+/*# sourceMappingURL=/cdn/shop/t/8/assets/marquee.css.map?v=164391773163375287061717119075 */
